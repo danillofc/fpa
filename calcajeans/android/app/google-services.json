@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "401701564383",
+    "firebase_url": "https://calcajeans-78d6d.firebaseio.com",
+    "project_id": "calcajeans-78d6d",
+    "storage_bucket": "calcajeans-78d6d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401701564383:android:dc0cfcdd9b8348324a9e6a",
+        "android_client_info": {
+          "package_name": "com.example.calcajeans"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401701564383-e0jgthl0icrb9kbqmmm5p23fmoos0sfi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-eln_yjbZjl7qPUk97yAdkJ20mICKbW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401701564383-e0jgthl0icrb9kbqmmm5p23fmoos0sfi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
