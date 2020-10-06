@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:calcajeans/quizpage.dart';
-import 'package:calcajeans/tutorial.dart';
+import 'quizpage.dart';
+import "tutorial.dart";
 
 class home extends StatefulWidget {
+  
   @override
   _homeState createState() => _homeState();
 }

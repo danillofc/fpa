@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:calcajeans/quizpage.dart';
+import 'quizpage.dart';
 
 class resultpage extends StatefulWidget {
   int acertos;
@@ -19,13 +19,13 @@ class _resultpageState extends State<resultpage> {
         title: Text(
           "Resultado",
           style: TextStyle(
-            fontSize: 70.0,
+            fontSize: 30.0,
           ),
         ),
       ),
       body: Center(
         child: Text(
-          "Você acertou $acertos perguntas",
+          "Você acertou $acertos pergunta(s)",
           style: TextStyle(
             fontSize: 30.0,
           ),

@@ -1,7 +1,7 @@
-import 'package:calcajeans/confeccao.dart';
+import 'confeccao.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:calcajeans/maquinas.dart';
+import 'maquinas.dart';
 
 class tutorial extends StatefulWidget {
   @override

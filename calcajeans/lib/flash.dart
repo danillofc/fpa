@@ -1,7 +1,7 @@
-import 'package:calcajeans/login.dart';
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:calcajeans/home.dart';
+import 'login.dart';
+import 'dart:async';
+
 
 class telaflash extends StatefulWidget {
   @override
@@ -9,12 +9,13 @@ class telaflash extends StatefulWidget {
 }
 
 class _telaflashState extends State<telaflash> {
+  
   @override
   void initState() {
     super.initState();
     Timer(Duration(seconds: 2), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => home(), //será Login, quando tiver pronta
+        builder: (context) => telalogin(), //será Login, quando tiver pronta
       ));
     });
   }

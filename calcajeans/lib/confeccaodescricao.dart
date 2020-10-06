@@ -1,6 +1,7 @@
-import 'package:calcajeans/confeccao.dart';
-import 'package:calcajeans/tutorial.dart';
 import 'package:flutter/material.dart';
+import 'confeccao.dart';
+import 'tutorial.dart';
+
 
 class confeccaodescricao extends StatelessWidget {
   String maq;

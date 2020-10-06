@@ -1,5 +1,5 @@
-import 'package:calcajeans/maquinas.dart';
 import 'package:flutter/material.dart';
+import 'maquinas.dart';
 
 
 class maqdescricao extends StatelessWidget {
@@ -71,13 +71,21 @@ class _pageState extends State<page> {
             child: Container(
               padding: EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                data, //Texto sobre a máquina
-                style: TextStyle(
-                  fontSize: 16.0,
-                ),
+              child: ListView(
+                children: <Widget>[
+                  Image(image: AssetImage(
+                          "assets/imagens/maq.jpg",
+                        ),
+                      ),
+                  Text(
+                    data, //Texto sobre a máquina
+                    style: TextStyle(
+                      fontSize: 16.0,
+                    ),
+                  ),
+                ],
               ),
-            ),
+            ),  
           ),
           Expanded(
             flex: 6,

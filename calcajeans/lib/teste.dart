@@ -62,3 +62,32 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+
+// IMAGEM E TEXTO INFINITO, COM CONTAINER E LISTVIEW
+// @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       body: Column(
+//         children: <Widget>[
+//           Expanded(
+//             flex: 3,
+//             child: Container(
+//               padding: EdgeInsets.all(15.0),
+//               alignment: Alignment.bottomLeft,
+//               child: ListView(                               Listview com imagem e texto, entro de Container
+//                 children: <Widget>[
+//                   Image(image: AssetImage(
+//                           "assets/imagens/maq.jpg",
+//                         ),
+//                       ),
+//                   Text(
+//                     data, //Texto sobre a máquina
+//                     style: TextStyle(
+//                       fontSize: 16.0,
+//                     ),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//           Expanded(

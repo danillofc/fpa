@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:calcajeans/quizpage.dart';
-import 'package:calcajeans/flash.dart';
-import 'package:calcajeans/maqdescricao.dart';
+import 'quizpage.dart';
+import 'flash.dart';
+import 'maqdescricao.dart';
 
 class maquinas extends StatefulWidget {
   @override

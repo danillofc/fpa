@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:calcajeans/confeccaodescricao.dart';
+import 'confeccaodescricao.dart';
 
 class confeccao extends StatefulWidget {
   @override

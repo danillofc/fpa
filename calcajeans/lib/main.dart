@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:calcajeans/flash.dart';
+import 'flash.dart';
 
 void main() => runApp(MyApp());
 
