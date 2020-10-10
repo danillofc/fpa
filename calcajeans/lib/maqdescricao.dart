@@ -141,7 +141,7 @@ class _pageState extends State<page> {
             //child: Material(
             child: Container(
               // padding: EdgeInsets.all(4.0),
-              // color: Colors.blue,
+              color: Colors.blue,
               child: Text(
                 "voltar",
                 style: TextStyle(

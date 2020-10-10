@@ -104,7 +104,7 @@ class _quizpage2State extends State<quizpage2> {
   }
 
   void checkanswer(String k) {
-    if (mydata[2][i.toString()] == mydata[1][i.toString()][k]) {
+    if (mydata[3][i.toString()] == mydata[2][i.toString()][k]) {
       acertos = acertos + 1;
       colortoshow = right;
     } else {
@@ -113,25 +113,26 @@ class _quizpage2State extends State<quizpage2> {
     setState(() {
       btncolor[k] = colortoshow;
     });
-    Timer(Duration(seconds: 2), next); //mudei de 2 pra 3
+    Timer(Duration(seconds: 2), next); //mudei de 2 pra 1
   }
 
   Widget botao(String k) {
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: 5.0,
+        vertical: 2.0,
         horizontal: 20.0,
       ),
       child: MaterialButton(
         onPressed: () => checkanswer(k),
         child: Text(
-          mydata[1][i.toString()][k],
+          mydata[2][i.toString()][k],
           style: TextStyle(
             color: Colors.white,
             fontSize: 15.0,
           ),
         ),
-        color: Colors.blue,
+        //color: Colors.blue,
+        color: btncolor[k],  //ta dando erro
         minWidth: 200.0,
         height: 40,
       ),
@@ -147,12 +148,13 @@ class _quizpage2State extends State<quizpage2> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+
           //PERGUNTA(IMAGEM)
-          Expanded(
+          Container(
             //flex: 6,
             child: Padding(
               //adicionei
-              padding: EdgeInsets.symmetric(vertical: 16.0), //adicionei
+              padding: EdgeInsets.symmetric(vertical: 5.0), //adicionei
               child: Material(
                 //adicionei
                 child: Container(
@@ -172,19 +174,25 @@ class _quizpage2State extends State<quizpage2> {
               ),
             ),
           ),
+          
           //PERGUNTA(TEXTO)
-          //   padding: EdgeInsets.all(20.0),
-          //   alignment: Alignment.bottomLeft,
-          //   child: Text(
-          //     mydata[3][i.toString()],
-          //     style: TextStyle(
-          //       fontSize: 20.0,
-          //     ),
-          //   ),
-          // ),
-          // ),
+          Container(
+          //Expanded(
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
+            //alignment: Alignment.bottomLeft,
+              child: Text(
+                mydata[1][i.toString()],
+                style: TextStyle(
+                  fontSize: 20.0,
+                ),
+              ),
+            ),
+          ),
+          
           //ALTERNATIVAS
-          Expanded(
+          //Expanded(
+          Container(
             //flex: 3,
             child: Container(
               child: Column(
@@ -197,13 +205,40 @@ class _quizpage2State extends State<quizpage2> {
               ),
             ),
           ),
+
           //BARRA INFERIOR
-          Expanded(
-            //flex: 1,
+          // Expanded(
+          //   //flex: 1,
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //       color: Colors.green,
+          //     ),
+          //   ),
+          // ),
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              ));
+            },
+            //child: Material(
             child: Container(
-              decoration: BoxDecoration(
-                color: Colors.green,
+              // padding: EdgeInsets.all(4.0),
+              color: Colors.blue,
+              child: Text(
+                "voltar",
+                style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 16.0,
+                ),
+               //maxLines: 1,
               ),
+              // splashColor: Colors.indigo[700],
+              // highlightColor: Colors.indigo[700],
+              // minWidth: 200.0,
+              // height: 45.0,
+              // shape: (RoundedRectangleBorder(
+              //     borderRadius: BorderRadius.circular(20.0))),
             ),
           ),
         ],

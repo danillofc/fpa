@@ -1,3 +1,5 @@
+import 'package:calcajeans/home.dart';
+
 import 'confeccao.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -79,16 +81,49 @@ class _tutorialState extends State<tutorial> {
           ),
         ),
       ),
-      body: Container(
-        child: ListView(
-          children: <Widget>[
-            customcard("Máquinas", imagem[0]),
-            customcard("Processo de Confecção", imagem[1]),
-            customcard("333", imagem[1]),
-            customcard("444", imagem[0]),
-            customcard("555", imagem[1]),
-          ],
-        ),
+
+      body: Column(
+      //body: Container(
+         children: <Widget>[
+          Expanded(
+            child: ListView(
+              children: <Widget>[
+                customcard("Máquinas", imagem[0]),
+                customcard("Processo de Confecção", imagem[1]),
+                customcard("333", imagem[1]),
+                customcard("444", imagem[0]),
+                customcard("555", imagem[1]),
+              ],
+            ),
+          ),
+         
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              ));
+            },
+            //child: Material(
+            child: Container(
+              padding: EdgeInsets.all(4.0),
+              color: Colors.blue,
+              child: Text(
+                "voltar",
+                style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 16.0,
+                ),
+                //maxLines: 1,
+              ),
+              // splashColor: Colors.indigo[700],
+              // highlightColor: Colors.indigo[700],
+              // minWidth: 200.0,
+              // height: 45.0,
+              // shape: (RoundedRectangleBorder(
+              //     borderRadius: BorderRadius.circular(20.0))),
+            ),
+          ),
+        ],
       ),
     );
   }

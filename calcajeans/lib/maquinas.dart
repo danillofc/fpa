@@ -1,3 +1,4 @@
+import 'package:calcajeans/tutorial.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'quizpage.dart';
@@ -79,16 +80,49 @@ class _maquinasState extends State<maquinas> {
           ),
         ),
       ),
-      body: Container(
-        child: ListView(
-          children: <Widget>[
-            customcard("Pespontadeira", imagem[0]),
-            customcard("Overlock", imagem[1]),
-            customcard("Interlock", imagem[2]),
-            customcard("Máquina Reta", imagem[3]),
-          ],
-        ),
-      ),
+
+      body: Column(
+      //body: Container(
+        children: <Widget>[
+          Expanded(
+            child: ListView(
+              children: <Widget>[
+                customcard("Pespontadeira", imagem[0]),
+                customcard("Overlock", imagem[1]),
+                customcard("Interlock", imagem[2]),
+                customcard("Máquina Reta", imagem[3]),
+              ],
+            ),
+          ),
+          
+          InkWell(
+            onTap: () {
+              Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => tutorial(),
+              ));
+            },
+            //child: Material(
+            child: Container(
+              // padding: EdgeInsets.all(4.0),
+              color: Colors.blue,
+              child: Text(
+                "voltar",
+                style: TextStyle(
+                  color: Colors.green,
+                  fontSize: 16.0,
+                ),
+                //maxLines: 1,
+              ),
+              // splashColor: Colors.indigo[700],
+              // highlightColor: Colors.indigo[700],
+              // minWidth: 200.0,
+              // height: 45.0,
+              // shape: (RoundedRectangleBorder(
+              //     borderRadius: BorderRadius.circular(20.0))),
+            ),
+          ),
+        ],
+      )
     );
   }
 }
