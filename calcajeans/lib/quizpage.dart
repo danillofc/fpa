@@ -147,7 +147,7 @@ class _quizpage2State extends State<quizpage2> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-          //PERGUNTA
+          //PERGUNTA(IMAGEM)
           Expanded(
             //flex: 6,
             child: Padding(
@@ -172,10 +172,11 @@ class _quizpage2State extends State<quizpage2> {
               ),
             ),
           ),
+          //PERGUNTA(TEXTO)
           //   padding: EdgeInsets.all(20.0),
           //   alignment: Alignment.bottomLeft,
           //   child: Text(
-          //     mydata[0][i.toString()],
+          //     mydata[3][i.toString()],
           //     style: TextStyle(
           //       fontSize: 20.0,
           //     ),

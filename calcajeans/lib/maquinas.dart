@@ -82,10 +82,10 @@ class _maquinasState extends State<maquinas> {
       body: Container(
         child: ListView(
           children: <Widget>[
-            customcard("pespontadeira", imagem[0]),
-            customcard("overlock", imagem[1]),
-            customcard("interlock", imagem[1]),
-            customcard("reta", imagem[0]),
+            customcard("Pespontadeira", imagem[0]),
+            customcard("Overlock", imagem[1]),
+            customcard("Interlock", imagem[2]),
+            customcard("Máquina Reta", imagem[3]),
           ],
         ),
       ),
