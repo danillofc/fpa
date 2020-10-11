@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 import 'maquinas.dart';
 
 class maqdescricao extends StatelessWidget {
@@ -54,28 +55,6 @@ class _pageState extends State<page> {
   final String imagem;
   _pageState(this.data, this.maquina, this.imagem);
 
-  // Widget choicebutton(String k) {
-  //   return Padding(
-  //     padding: EdgeInsets.symmetric(
-  //       vertical: 10.0,
-  //       horizontal: 20.0,
-  //     ),
-  //     child: Material(
-  //       child: Text(
-  //         //mydata[1][i.toString()][k],
-  //         k,
-  //         style: TextStyle(
-  //           color: Colors.black,
-  //           fontSize: 16.0,
-  //         ),
-  //         maxLines: 1,
-  //       ),
-  //       shape:
-  //           RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +69,7 @@ class _pageState extends State<page> {
                 children: <Widget>[
                   Image(
                     image: AssetImage(
-                      imagem,
+                      imagem,   //Imagem da máquina
                     ),
                   ),
                   Text(
@@ -98,68 +77,15 @@ class _pageState extends State<page> {
                     style: TextStyle(
                       fontSize: 16.0,
                     ),
+                    textAlign: TextAlign.justify,
                   ),
                 ],
               ),
             ),
           ),
-          // Expanded(
-          //   flex: 6,
-          //   child: Container(
-          //     child: Column(
-          //       mainAxisAlignment: MainAxisAlignment.center,
-          //       children: <Widget>[
-          //         choicebutton('a'),
-          //         choicebutton('b'),
-          //         choicebutton('c'),
-          //         choicebutton('d'),
-          //       ],
-          //     ),
-          //   ),
-          // ),
-          // Expanded(
-          //   flex: 1,
-          //   child: Container(
-          //     alignment: Alignment.topCenter,
-          //     child: Center(
-          //       child: Text(
-          //         "showtimer",
-          //         style: TextStyle(
-          //           fontSize: 35.0,
-          //           fontWeight: FontWeight.w500,
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => maquinas(),
-              ));
-            },
-            //child: Material(
-            child: Container(
-              // padding: EdgeInsets.all(4.0),
-              color: Colors.blue,
-              child: Text(
-                "voltar",
-                style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 16.0,
-                ),
-                //maxLines: 1,
-              ),
-              // splashColor: Colors.indigo[700],
-              // highlightColor: Colors.indigo[700],
-              // minWidth: 200.0,
-              // height: 45.0,
-              // shape: (RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(20.0))),
-            ),
-          ),
         ],
       ),
+      
       appBar: AppBar(
         title: Text(
           //"Máquinas",
@@ -168,6 +94,36 @@ class _pageState extends State<page> {
             fontSize: 20.0,
           ),
         ),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => maquinas(),
+            ));
+          },
+          child: Icon(Icons.arrow_back),
+        ),
+      ),
+
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SizedBox(width: 7),
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                size: 24.0,
+              ),
+              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              )),
+            ),
+            SizedBox(width: 7),
+          ],
+        ),
+        color: Theme.of(context).primaryColor,
+        shape: CircularNotchedRectangle(),
       ),
     );
   }

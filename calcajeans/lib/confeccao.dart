@@ -1,3 +1,6 @@
+import 'package:calcajeans/demoexemplo.dart';
+import 'package:calcajeans/home.dart';
+import 'package:calcajeans/tutorial.dart';
 import 'package:flutter/material.dart';
 import 'confeccaodescricao.dart';
 
@@ -67,6 +70,16 @@ class _confeccaoState extends State<confeccao> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      body: Container(
+        child: ListView(
+          children: <Widget>[
+            customcard("Moldes", imagem[0]),
+            customcard("Aviamentos frontais", imagem[1]),
+            customcard("Aviamentos traseiros", imagem[2]),
+          ],
+        ),
+      ),
+
       appBar: AppBar(
         title: Text(
           "Confecção",
@@ -74,15 +87,36 @@ class _confeccaoState extends State<confeccao> {
             fontSize: 20.0,
           ),
         ),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => tutorial(),
+            ));
+          },
+          child: Icon(Icons.arrow_back),
+        ),
       ),
-      body: Container(
-        child: ListView(
+      
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            customcard("moldes", imagem[0]),
-            customcard("aviamentos frontais", imagem[1]),
-            customcard("aviamentos traseiros", imagem[2]),
+            SizedBox(width: 7),
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                size: 24.0,
+              ),
+              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              )),
+            ),
+            SizedBox(width: 7),
           ],
         ),
+        color: Theme.of(context).primaryColor,
+        shape: CircularNotchedRectangle(),
       ),
     );
   }

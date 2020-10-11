@@ -67,8 +67,10 @@ class _quizpage2State extends State<quizpage2> {
   genrandomarray() {
     var distinctIds = [];
     var rand = new Random();
-    for (int i = 0;;) {
-      distinctIds.add(1+rand.nextInt(10));
+    for (int t = 0;;) {
+      t = t;
+      //distinctIds.add(1+rand.nextInt(10));
+      distinctIds.add(rand.nextInt(9));
       random_array = distinctIds.toSet().toList();
       if (random_array.length < 10) {
         continue;
@@ -88,7 +90,7 @@ class _quizpage2State extends State<quizpage2> {
   void next() {
     setState(() {
       if (j < 10) {
-        i = random_array[j];    //Número da pergunta
+        i = random_array[j]; //Número da pergunta
         j++;
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -113,7 +115,7 @@ class _quizpage2State extends State<quizpage2> {
     setState(() {
       btncolor[k] = colortoshow;
     });
-    Timer(Duration(seconds: 2), next); //mudei de 2 pra 1
+    Timer(Duration(seconds: 1), next); //mudei de 2 pra 1
   }
 
   Widget botao(String k) {
@@ -131,8 +133,7 @@ class _quizpage2State extends State<quizpage2> {
             fontSize: 15.0,
           ),
         ),
-        //color: Colors.blue,
-        color: btncolor[k],  //ta dando erro
+        color: btncolor[k],
         minWidth: 200.0,
         height: 40,
       ),
@@ -142,13 +143,12 @@ class _quizpage2State extends State<quizpage2> {
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations(
-        [DeviceOrientation.portraitUp,DeviceOrientation.landscapeLeft]);
+        [DeviceOrientation.portraitUp, DeviceOrientation.landscapeLeft]);
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-
           //PERGUNTA(IMAGEM)
           Container(
             //flex: 6,
@@ -162,11 +162,7 @@ class _quizpage2State extends State<quizpage2> {
                   height: 200.0, //adicionei
                   width: 200.0, //adicionei
                   child: Image(
-                    //adicionei
                     image: AssetImage(
-                      //adicionei
-                      //question, //adicionei
-                      //'assets/imagens/maq.jpg'
                       mydata[0][i.toString()],
                     ),
                   ),
@@ -174,22 +170,24 @@ class _quizpage2State extends State<quizpage2> {
               ),
             ),
           ),
-          
+
           //PERGUNTA(TEXTO)
           Container(
-          //Expanded(
+            //Expanded(
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-            //alignment: Alignment.bottomLeft,
+              //alignment: Alignment.bottomLeft,
               child: Text(
                 mydata[1][i.toString()],
+                maxLines: 3,
+                textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: 6.0,
                 ),
               ),
             ),
           ),
-          
+
           //ALTERNATIVAS
           //Expanded(
           Container(
@@ -205,43 +203,37 @@ class _quizpage2State extends State<quizpage2> {
               ),
             ),
           ),
-
-          //BARRA INFERIOR
-          // Expanded(
-          //   //flex: 1,
-          //   child: Container(
-          //     decoration: BoxDecoration(
-          //       color: Colors.green,
-          //     ),
-          //   ),
-          // ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => home(),
-              ));
-            },
-            //child: Material(
-            child: Container(
-              // padding: EdgeInsets.all(4.0),
-              color: Colors.blue,
-              child: Text(
-                "voltar",
-                style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 16.0,
-                ),
-               //maxLines: 1,
-              ),
-              // splashColor: Colors.indigo[700],
-              // highlightColor: Colors.indigo[700],
-              // minWidth: 200.0,
-              // height: 45.0,
-              // shape: (RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(20.0))),
-            ),
-          ),
         ],
+      ),
+      appBar: AppBar(
+        title: Text(
+          "Quiz",
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SizedBox(width: 7),
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                size: 24.0,
+              ),
+              onPressed: () =>
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              )),
+            ),
+            SizedBox(width: 7),
+          ],
+        ),
+        color: Theme.of(context).primaryColor,
+        shape: CircularNotchedRectangle(),
       ),
     );
   }

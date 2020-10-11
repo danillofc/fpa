@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'confeccao.dart';
+import 'home.dart';
 import 'tutorial.dart';
 
-
 class confeccaodescricao extends StatelessWidget {
-  String maq;
-  confeccaodescricao(this.maq);
+  String conf;
+  confeccaodescricao(this.conf);
   String descricao;
+  String image;
 
   setasset() {
-    if (maq == "moldes") {
-      descricao = "a maquina pespontadeira é usada para...";
-    } else if (maq == "aviamentos frontais") {
-      descricao = "a maquina overlock é usada para...";
-    } else if (maq == "aviamentos traseiros") {
-      descricao = "a maquina interlock é usada para...";
-    } else if (maq == "reta") {
-      descricao = "a maquina reta é usada para...";
+    if (conf == "Moldes") {
+      descricao = "Os moldes são ...";
+      image = "assets/imagens/moldes.png";
+    } else if (conf == "Aviamentos frontais") {
+      descricao = "Os aviamentos frontais são...";
+      image = "assets/imagens/aviamentofrontal.png";
+    } else if (conf == "Aviamentos traseiros") {
+      descricao = "Os aviamentos traseiros são ...";
+      image = "assets/imagens/aviamentotraseiro.png";
     }
   }
 
@@ -24,45 +26,33 @@ class confeccaodescricao extends StatelessWidget {
   Widget build(BuildContext context) {
     setasset();
     String data = descricao;
-    return page(data: data);
+    String item = conf;
+    String imagem = image;
+    return page(data: data, item: item, imagem: imagem);
   }
 }
 
 class page extends StatefulWidget {
   final String data;
+  final String item;
+  final String imagem;
 
-  page({Key key, @required this.data}) : super(key: key);
+  page(
+      {Key key,
+      @required this.data,
+      @required this.item,
+      @required this.imagem})
+      : super(key: key);
   @override
-  _pageState createState() => _pageState(data);
+  _pageState createState() => _pageState(data, item, imagem);
 }
 
 class _pageState extends State<page> {
   final String data;
-  _pageState(this.data);
+  final String item;
+  final String imagem;
+  _pageState(this.data, this.item, this.imagem);
 
-  Widget choicebutton(String k) {
-    return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: 10.0,
-        horizontal: 20.0,
-      ),
-      child: Material(
-        child: Text(
-          //mydata[1][i.toString()][k],
-          k,
-          style: TextStyle(
-            color: Colors.black,
-            fontSize: 16.0,
-          ),
-          maxLines: 1,
-        ),
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-      ),
-    );
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
@@ -72,83 +62,63 @@ class _pageState extends State<page> {
             child: Container(
               padding: EdgeInsets.all(15.0),
               alignment: Alignment.bottomLeft,
-              child: Text(
-                data, //Texto sobre a confeccao
-                style: TextStyle(
-                  fontSize: 16.0,
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            flex: 6,
-            child: Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+              child: ListView(
                 children: <Widget>[
-                  choicebutton('a'),
-                  choicebutton('b'),
-                  choicebutton('c'),
-                  choicebutton('d'),
+                  Image(
+                    image: AssetImage(
+                      imagem,   //Imagem da máquina
+                    ),
+                  ),
+                  Text(
+                    data, //Texto sobre a máquina
+                    style: TextStyle(
+                      fontSize: 16.0,
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              alignment: Alignment.topCenter,
-              child: Center(
-                child: Text(
-                  "showtimer",
-                  style: TextStyle(
-                    fontSize: 35.0,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ),
-            ),
-          ),
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => confeccao(),
-              ));
-            },
-            child: Material(
-              child: Text(
-                "voltar",
-                style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 16.0,
-                ),
-                maxLines: 1,
-              ),
-              // splashColor: Colors.indigo[700],
-              // highlightColor: Colors.indigo[700],
-              // minWidth: 200.0,
-              // height: 45.0,
-              shape: (RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20.0))),
-            ),
-          ),
         ],
       ),
+      
       appBar: AppBar(
         title: Text(
-          "Confeccao",
+          item,
           style: TextStyle(
             fontSize: 20.0,
           ),
         ),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => confeccao(),
+            ));
+          },
+          child: Icon(Icons.arrow_back),
+        ),
       ),
-      bottomNavigationBar: InkWell(
-        onTap: () {
-          Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (context) => tutorial(),
-          ));
-        },
-        child: Icon(Icons.arrow_back),
+
+       bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SizedBox(width: 7),
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                size: 24.0,
+              ),
+              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              )),
+            ),
+            SizedBox(width: 7),
+          ],
+        ),
+        color: Theme.of(context).primaryColor,
+        shape: CircularNotchedRectangle(),
       ),
     );
   }

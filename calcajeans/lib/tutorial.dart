@@ -73,15 +73,6 @@ class _tutorialState extends State<tutorial> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Tutorial",
-          style: TextStyle(
-            fontSize: 20.0,
-          ),
-        ),
-      ),
-
       body: Column(
       //body: Container(
          children: <Widget>[
@@ -90,9 +81,6 @@ class _tutorialState extends State<tutorial> {
               children: <Widget>[
                 customcard("Máquinas", imagem[0]),
                 customcard("Processo de Confecção", imagem[1]),
-                customcard("333", imagem[1]),
-                customcard("444", imagem[0]),
-                customcard("555", imagem[1]),
               ],
             ),
           ),
@@ -124,6 +112,45 @@ class _tutorialState extends State<tutorial> {
             ),
           ),
         ],
+      ),
+
+      appBar: AppBar(
+        title: Text(
+          "Tutorial",
+          style: TextStyle(
+            fontSize: 20.0,
+          ),
+        ),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => home(),
+            ));
+          },
+          child: Icon(Icons.arrow_back),
+        ),
+      ),
+
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SizedBox(width: 7),
+            IconButton(
+              icon: Icon(
+                Icons.home,
+                size: 24.0,
+              ),
+              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+              )),
+            ),
+            SizedBox(width: 7),
+          ],
+        ),
+        color: Theme.of(context).primaryColor,
+        shape: CircularNotchedRectangle(),
       ),
     );
   }
