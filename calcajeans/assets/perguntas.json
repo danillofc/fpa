@@ -1,9 +1,9 @@
 [
     {
         "1": "assets/imagens/maq.jpg", 
-        "2": "assets/imagens/reta.jpg",
-        "3": "assets/imagens/pesp.jpg",
-        "4": "assets/imagens/jeans.jpg",
+        "2": "assets/imagens/braguilha.jpg",
+        "3": "assets/imagens/frontal.jpg",
+        "4": "assets/imagens/passante.jpg",
         "5": "assets/imagens/over.jpg",
         "6": "assets/imagens/aviamentofrontal.png",
         "7": "assets/imagens/jpegcomp1.jpg",
@@ -13,9 +13,9 @@
     },
     {
         "1": "A máquina mostrada na imagem corresponde ao tipo mais comum numa confecção de jeans. Que máquina é essa?",
-        "2": "A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve s",
-        "3": "Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1Pergunta(texto) c1",
-        "4": "Pergunta(texto) d1",
+        "2": "A região apontada pela seta na imagem representa que parte da calça?",
+        "3": "A imagem representa qual vista da calça?",
+        "4": "A região apontada pela seta na imagem representa que parte da calça?",
         "5": "Pergunta(texto) e1",
         "6": "Pergunta(texto) f1",
         "7": "Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1",
@@ -31,22 +31,22 @@
             "d": "Interlock"
         },
         "2": {
-            "a": "resposta b1",
-            "b": "resposta b2",
-            "c": "resposta b3",
-            "d": "resposta b4"
+            "a": "Passante",
+            "b": "Cós",
+            "c": "Braguilha",
+            "d": "Bolso"
         },
         "3": {
-            "a": "resposta c1",
-            "b": "resposta c2",
-            "c": "resposta c3",
-            "d": "resposta c4"
+            "a": "Lateral",
+            "b": "Frontal",
+            "c": "Traseira",
+            "d": "Nenhuma das alternativas anteriores"
         },
         "4": {
-            "a": "resposta d1",
-            "b": "resposta d2",
-            "c": "resposta d3",
-            "d": "resposta d4"
+            "a": "Cós",
+            "b": "Pertingal",
+            "c": "Pala",
+            "d": "Passante"
         },
         "5": {
             "a": "resposta e1",
@@ -87,9 +87,9 @@
     },
     {
         "1": "Máquina Reta",
-        "2": "resposta b1",
-        "3": "resposta c1",
-        "4": "resposta d1",
+        "2": "Braguilha",
+        "3": "Frontal",
+        "4": "Passante",
         "5": "resposta e1",
         "6": "resposta f1",
         "7": "resposta g1",

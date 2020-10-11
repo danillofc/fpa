@@ -15,7 +15,7 @@ class _maquinasState extends State<maquinas> {
   List<String> imagem = [
     "assets/imagens/pesp.jpg",
     "assets/imagens/over.jpg",
-    "assets/imagens/inter.jpg",
+    "assets/imagens/interlock.jpg",
     "assets/imagens/reta.jpg",
   ];
 
@@ -96,6 +96,7 @@ class _maquinasState extends State<maquinas> {
             fontSize: 20.0,
           ),
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(

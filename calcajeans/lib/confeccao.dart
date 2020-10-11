@@ -12,8 +12,8 @@ class confeccao extends StatefulWidget {
 class _confeccaoState extends State<confeccao> {
   List<String> imagem = [
     "assets/imagens/moldes.png",
-    "assets/imagens/aviamentofrontal.png",
-    "assets/imagens/aviamentotraseiro.png",
+    "assets/imagens/av_f.jpg",
+    "assets/imagens/av_t.jpg",
   ];
 
   Widget customcard(String opcao, String image) {

@@ -121,6 +121,7 @@ class _tutorialState extends State<tutorial> {
             fontSize: 20.0,
           ),
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -129,28 +130,6 @@ class _tutorialState extends State<tutorial> {
           },
           child: Icon(Icons.arrow_back),
         ),
-      ),
-
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                size: 24.0,
-              ),
-              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => home(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
-        shape: CircularNotchedRectangle(),
       ),
     );
   }

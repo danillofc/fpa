@@ -3,7 +3,6 @@ import 'quizpage.dart';
 import "tutorial.dart";
 
 class home extends StatefulWidget {
-  
   @override
   _homeState createState() => _homeState();
 }
@@ -78,6 +77,7 @@ class _homeState extends State<home> {
             fontSize: 20.0,
           ),
         ),
+        centerTitle: true,
       ),
       body: Container(
         child: ListView(
