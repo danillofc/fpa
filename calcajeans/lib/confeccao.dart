@@ -87,6 +87,7 @@ class _confeccaoState extends State<confeccao> {
             fontSize: 20.0,
           ),
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
@@ -96,7 +97,7 @@ class _confeccaoState extends State<confeccao> {
           child: Icon(Icons.arrow_back),
         ),
       ),
-      
+
       bottomNavigationBar: BottomAppBar(
         child: Row(
           mainAxisSize: MainAxisSize.max,

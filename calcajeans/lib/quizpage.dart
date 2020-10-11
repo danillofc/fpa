@@ -6,8 +6,14 @@ import 'dart:convert';
 import 'resultpage.dart';
 import 'home.dart';
 
-class quizpage extends StatelessWidget {
+class quizpage extends StatefulWidget {
+  @override
+  _quizpageState createState() => _quizpageState();
+}
+
+class _quizpageState extends State<quizpage> {
   String assetjson;
+
   setasset() {
     assetjson = "assets/perguntas.json";
   }
@@ -68,9 +74,8 @@ class _quizpage2State extends State<quizpage2> {
     var distinctIds = [];
     var rand = new Random();
     for (int t = 0;;) {
-      t = t;
       //distinctIds.add(1+rand.nextInt(10));
-      distinctIds.add(rand.nextInt(9));
+      distinctIds.add(1+rand.nextInt(10));
       random_array = distinctIds.toSet().toList();
       if (random_array.length < 10) {
         continue;
@@ -135,7 +140,7 @@ class _quizpage2State extends State<quizpage2> {
         ),
         color: btncolor[k],
         minWidth: 200.0,
-        height: 40,
+        //height: 20,
       ),
     );
   }
@@ -161,6 +166,7 @@ class _quizpage2State extends State<quizpage2> {
                   //adicionei
                   height: 200.0, //adicionei
                   width: 200.0, //adicionei
+                  color: Colors.grey,
                   child: Image(
                     image: AssetImage(
                       mydata[0][i.toString()],
@@ -174,6 +180,9 @@ class _quizpage2State extends State<quizpage2> {
           //PERGUNTA(TEXTO)
           Container(
             //Expanded(
+            //height: 60.0, //adicionei
+            //width: 200.0, //adicionei
+            color: Colors.green,
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
               //alignment: Alignment.bottomLeft,
@@ -182,7 +191,7 @@ class _quizpage2State extends State<quizpage2> {
                 maxLines: 3,
                 textAlign: TextAlign.justify,
                 style: TextStyle(
-                  fontSize: 6.0,
+                  fontSize: 15.0,
                 ),
               ),
             ),
@@ -191,8 +200,9 @@ class _quizpage2State extends State<quizpage2> {
           //ALTERNATIVAS
           //Expanded(
           Container(
+            //height: 60.0, //adicionei
             //flex: 3,
-            child: Container(
+            //child: Container(
               child: Column(
                 children: <Widget>[
                   botao("a"),
@@ -202,10 +212,11 @@ class _quizpage2State extends State<quizpage2> {
                 ],
               ),
             ),
-          ),
+          //),
         ],
       ),
       appBar: AppBar(
+        //toolbarHeight: 30.0,
         title: Text(
           "Quiz",
           style: TextStyle(
@@ -213,28 +224,28 @@ class _quizpage2State extends State<quizpage2> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                size: 24.0,
-              ),
-              onPressed: () =>
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => home(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
-        shape: CircularNotchedRectangle(),
-      ),
+      // bottomNavigationBar: BottomAppBar(
+      //   child: Row(
+      //     mainAxisSize: MainAxisSize.max,
+      //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //     children: <Widget>[
+      //       SizedBox(width: 7),
+      //       IconButton(
+      //         icon: Icon(
+      //           Icons.home,
+      //           size: 24.0,
+      //         ),
+      //         onPressed: () =>
+      //             Navigator.of(context).pushReplacement(MaterialPageRoute(
+      //           builder: (context) => home(),
+      //         )),
+      //       ),
+      //       SizedBox(width: 7),
+      //     ],
+      //   ),
+      //   color: Theme.of(context).primaryColor,
+      //   shape: CircularNotchedRectangle(),
+      // ),
     );
   }
 }

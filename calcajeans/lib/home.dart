@@ -84,9 +84,6 @@ class _homeState extends State<home> {
           children: <Widget>[
             customcard("Tutorial", imagem[0]),
             customcard("Quiz", imagem[1]),
-            customcard("Tutorial", imagem[1]),
-            customcard("Quiz", imagem[0]),
-            customcard("Quiz", imagem[1]),
           ],
         ),
       ),

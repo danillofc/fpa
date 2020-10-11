@@ -89,6 +89,7 @@ class _pageState extends State<page> {
             fontSize: 20.0,
           ),
         ),
+        centerTitle: true,
         leading: GestureDetector(
           onTap: () {
             Navigator.of(context).pushReplacement(MaterialPageRoute(

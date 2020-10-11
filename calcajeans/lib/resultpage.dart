@@ -27,6 +27,7 @@ class _resultpageState extends State<resultpage> {
 
       //body: Center(
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween, //adicionei
         children: <Widget>[
           Container(alignment: Alignment.center,
             child: Text(
