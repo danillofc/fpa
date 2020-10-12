@@ -13,17 +13,17 @@ class confeccaodescricao extends StatelessWidget {
   setasset() {
     if (conf == "Moldes") {
       descricao =
-          "   Os moldes são peças que representam as partes do modelo da calça, retirados da modelagem, que foi desenvolvida sobre as bases.  ...";
-      image = "assets/imagens/moldes.png";
-      image2 = "assets/imagens/moldes.png";
+          "   Os moldes são peças que representam as partes do modelo da calça, retirados da modelagem, que foi desenvolvida sobre as bases.   A calça jeans é feita de tecido Denim, em que são feitos cortes conforme o formato dos moldes. A maioria dos moldes é do tipo simétrico, em relação aos lados (direito e esquerdo).   As imagens acima mostram os tipos comuns de moldes utilizados para a confecção de uma calça jeans básica.";
+      image = "assets/imagens/moldesdh.jpg";
+      image2 = "assets/imagens/moldeseh.jpg";
     } else if (conf == "Aviamentos frontais") {
-      descricao = "Os aviamentos frontais são...";
+      descricao = "   Os aviamentos frontais são as partes necessárias à confecção ou parte complementar da parte dianteira da calça. As imagens acima mostram os tipos comuns de aviamentos frontais utilizados para a confecção de uma calça jeans básica.";
       image = "assets/imagens/av_f.jpg";
-      image2 = "assets/imagens/av_f.jpg";
+      image2 = "assets/imagens/bolsofrontal.jpg";
     } else if (conf == "Aviamentos traseiros") {
-      descricao = "Os aviamentos traseiros são ...";
+      descricao = "   Os aviamentos traseiros são as partes necessárias à confecção ou parte complementar da parte traseira da calça. As imagens acima mostram os tipos comuns de aviamentos traseiros utilizados para a confecção de uma calça jeans básica.";
       image = "assets/imagens/av_t.jpg";
-      image2 = "assets/imagens/av_t.jpg";
+      image2 = "assets/imagens/palas.jpg";
     }
   }
 
@@ -110,6 +110,7 @@ class _pageState extends State<page> {
                       ],
                     ),
                   ),
+                  SizedBox(height: 14.0),
                   Text(
                     data, //Texto sobre a parte
                     style: TextStyle(
@@ -123,11 +124,13 @@ class _pageState extends State<page> {
           ),
         ],
       ),
+
       appBar: AppBar(
         title: Text(
           item,
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Beriberu',
           ),
         ),
         centerTitle: true,
@@ -137,30 +140,16 @@ class _pageState extends State<page> {
               builder: (context) => confeccao(),
             ));
           },
-          child: Icon(Icons.arrow_back),
+          child: Icon(Icons.arrow_back),  
         ),
-      ),
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                size: 24.0,
-              ),
-              onPressed: () =>
+        actions: [
+          IconButton(icon: Icon(Icons.home), 
+            onPressed: () =>
                   Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => home(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
-        shape: CircularNotchedRectangle(),
+            )),
+          ),
+        ],
       ),
     );
   }

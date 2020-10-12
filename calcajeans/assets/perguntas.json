@@ -2,26 +2,26 @@
     {
         "1": "assets/imagens/maq.jpg", 
         "2": "assets/imagens/braguilha.jpg",
-        "3": "assets/imagens/frontal.jpg",
+        "3": "assets/imagens/frente.jpg",
         "4": "assets/imagens/passante.jpg",
-        "5": "assets/imagens/over.jpg",
-        "6": "assets/imagens/aviamentofrontal.png",
-        "7": "assets/imagens/jpegcomp1.jpg",
-        "8": "assets/icones/quiz.jpg",
-        "9": "assets/icones/tutorial.jpg",
-        "10": "assets/imagens/maq.jpg"
+        "5": "assets/imagens/pala.jpg",
+        "6": "assets/imagens/bolsotraseiro.jpg",
+        "7": "assets/imagens/bolso.jpg",
+        "8": "assets/imagens/pesp.jpg",
+        "9": "assets/imagens/over.jpg",
+        "10": "assets/imagens/jeans.jpg"
     },
     {
         "1": "A máquina mostrada na imagem corresponde ao tipo mais comum numa confecção de jeans. Que máquina é essa?",
         "2": "A região apontada pela seta na imagem representa que parte da calça?",
         "3": "A imagem representa qual vista da calça?",
         "4": "A região apontada pela seta na imagem representa que parte da calça?",
-        "5": "Pergunta(texto) e1",
-        "6": "Pergunta(texto) f1",
-        "7": "Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1Pergunta(texto) g1",
-        "8": "Pergunta(texto) h1",
-        "9": "Pergunta(texto) i1",
-        "10": "A região destacada em vermelho na imagem representa que parte da calça?"
+        "5": "A região apontada pela seta na imagem representa que parte da calça?",
+        "6": "A região apontada pela seta na imagem representa que parte da calça?",
+        "7": "A imagem representa a composição de qual parte da calça?",
+        "8": "Qual tipo de máquina é apresentado na imagem?",
+        "9": "Qual tipo de máquina é apresentado na imagem?",
+        "10": "Qual tipo de tecido é utilizado na confecção do jeans?"
     },
     {
         "1": {
@@ -37,52 +37,52 @@
             "d": "Bolso"
         },
         "3": {
-            "a": "Lateral",
+            "a": "Lateral esquerda",
             "b": "Frontal",
             "c": "Traseira",
-            "d": "Nenhuma das alternativas anteriores"
+            "d": "Lateral direita"
         },
         "4": {
             "a": "Cós",
-            "b": "Pertingal",
+            "b": "Traseira",
             "c": "Pala",
             "d": "Passante"
         },
         "5": {
-            "a": "resposta e1",
-            "b": "resposta e2",
-            "c": "resposta e3",
-            "d": "resposta e4"
+            "a": "Bolso",
+            "b": "Pala",
+            "c": "Cós",
+            "d": "Braguilha"
         },
         "6": {
-            "a": "resposta f1",
-            "b": "resposta f2",
-            "c": "resposta f3",
-            "d": "resposta f4"
+            "a": "Cós",
+            "b": "Espelho",
+            "c": "Bolso dianteiro",
+            "d": "Bolso traseiro"
         },
         "7": {
-            "a": "resposta g1",
-            "b": "resposta g2",
-            "c": "resposta g3",
-            "d": "resposta g4"
+            "a": "Pala",
+            "b": "Bolso traseiro",
+            "c": "Cós",
+            "d": "Bolso dianteiro"
         },
         "8": {
-            "a": "resposta h1",
-            "b": "resposta h2",
-            "c": "resposta h3",
-            "d": "resposta h4"
+            "a": "Interlock",
+            "b": "Máquina Reta",
+            "c": "Pespontadeira",
+            "d": "Overlock"
         },
         "9": {
-            "a": "resposta i1",
-            "b": "resposta i2",
-            "c": "resposta i3",
-            "d": "resposta i4"
+            "a": "Overlock",
+            "b": "Interlock",
+            "c": "Máquina Reta",
+            "d": "Pespontadeira"
         },
         "10": {
-            "a": "resposta j1",
-            "b": "resposta j2",
-            "c": "resposta j3",
-            "d": "resposta j4"
+            "a": "Seda",
+            "b": "Denim",
+            "c": "Poliéster",
+            "d": "Malha"
         }
     },
     {
@@ -90,11 +90,11 @@
         "2": "Braguilha",
         "3": "Frontal",
         "4": "Passante",
-        "5": "resposta e1",
-        "6": "resposta f1",
-        "7": "resposta g1",
-        "8": "resposta h1",
-        "9": "resposta i1",
-        "10": "resposta j1"
+        "5": "Pala",
+        "6": "Bolso traseiro",
+        "7": "Bolso dianteiro",
+        "8": "Pespontadeira",
+        "9": "Overlock",
+        "10": "Denim"
     }
 ]

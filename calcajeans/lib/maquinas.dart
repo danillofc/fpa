@@ -27,9 +27,6 @@ class _maquinasState extends State<maquinas> {
       child: InkWell(
         onTap: () {
           Navigator.of(context).pushReplacement(MaterialPageRoute(
-            // in changelog 1 we will pass the langname name to ther other widget class
-            // this name will be used to open a particular JSON file
-            // for a particular language
             builder: (context) => maqdescricao(opcao),
           ));
         },
@@ -59,9 +56,11 @@ class _maquinasState extends State<maquinas> {
                     opcao,
                     style: TextStyle(
                       fontSize: 30.0,
+                      fontFamily: 'Pink',
                     ),
                   ),
                 ),
+                SizedBox(height: 6.0),
               ],
             ),
           ),
@@ -94,6 +93,7 @@ class _maquinasState extends State<maquinas> {
           "Máquinas",
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Pink',
           ),
         ),
         centerTitle: true,
@@ -105,28 +105,14 @@ class _maquinasState extends State<maquinas> {
           },
           child: Icon(Icons.arrow_back),
         ),
-      ),
-
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                size: 24.0,
-              ),
-              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+        actions: [
+          IconButton(icon: Icon(Icons.home), 
+            onPressed: () =>
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => home(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
-        shape: CircularNotchedRectangle(),
+            )),
+          ),
+        ],
       ),
     );
   }

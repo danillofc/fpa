@@ -16,48 +16,59 @@ class _telaloginState extends State<telalogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Login'),
+        title: Text('Registro',
+          style: TextStyle(
+            fontSize: 20.0,
+            fontFamily: 'Pink',
+          ),
+        ),
       ),
+      
       body: Form(
         key: _formKey,
-        child: Column(
-          children: <Widget>[
-            TextFormField(
-              validator: (input) {
-                if (input.isEmpty) {
-                  return "Informe o email";
-                }
-              },
-              onSaved: (input) => _email = input,
-              decoration: InputDecoration(labelText: "Email"),
-            ),
-            TextFormField(
-              validator: (input) {
-                if (input.length < 6) {
-                  return "Informe uma senha com no mínimo 6 dígitos";
-                }
-              },
-              onSaved: (input) => _password = input,
-              decoration: InputDecoration(labelText: "Senha"),
-              obscureText: true,
-            ),
-            RaisedButton(
-              // onPressed: signin(email,password).whenComplete(() =>
-              //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>home())))
-              // ),
-              onPressed: () {
-                Navigator.of(context).pushReplacement(MaterialPageRoute(
-                  builder: (context) =>
-                      home(), //será Login, quando tiver pronta
-                ));
-              },
-              child: Text("Login"),
-            ),
-          ],
+        child: Container(
+          padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 30.0),
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                validator: (input) {
+                  if (input.isEmpty) {
+                    return "Informe o email";
+                  }
+                },
+                onSaved: (input) => _email = input,
+                decoration: InputDecoration(labelText: "Email"),
+              ),
+              TextFormField(
+                validator: (input) {
+                  if (input.length < 6) {
+                    return "Informe uma senha com no mínimo 6 dígitos";
+                  }
+                },
+                onSaved: (input) => _password = input,
+                decoration: InputDecoration(labelText: "Senha"),
+                obscureText: true,
+              ),
+              SizedBox(height: 15),
+              RaisedButton(
+                // onPressed: signin(email,password).whenComplete(() =>
+                //   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=>home())))
+                // ),
+                onPressed: () {
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                    builder: (context) =>
+                        home(), //será Login, quando tiver pronta
+                  ));
+                },
+                child: Text("Registrar"),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
+}
 
   // }
   // Future<void> signIn() async {
@@ -73,4 +84,4 @@ class _telaloginState extends State<telalogin> {
   //   }
   // }
 
-}
+

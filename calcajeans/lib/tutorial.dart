@@ -27,7 +27,7 @@ class _tutorialState extends State<tutorial> {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
               builder: (context) => maquinas(),
             ));
-          } else if (opcao == "Processo de Confecção") {
+          } else if (opcao == "Confecção") {
             Navigator.of(context).pushReplacement(MaterialPageRoute(
               builder: (context) => confeccao(),
             ));
@@ -59,9 +59,11 @@ class _tutorialState extends State<tutorial> {
                     opcao,
                     style: TextStyle(
                       fontSize: 30.0,
+                      fontFamily: 'Pink',
                     ),
                   ),
                 ),
+                SizedBox(height: 6.0),
               ],
             ),
           ),
@@ -80,35 +82,8 @@ class _tutorialState extends State<tutorial> {
             child: ListView(
               children: <Widget>[
                 customcard("Máquinas", imagem[0]),
-                customcard("Processo de Confecção", imagem[1]),
+                customcard("Confecção", imagem[1]),
               ],
-            ),
-          ),
-         
-          InkWell(
-            onTap: () {
-              Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => home(),
-              ));
-            },
-            //child: Material(
-            child: Container(
-              padding: EdgeInsets.all(4.0),
-              color: Colors.blue,
-              child: Text(
-                "voltar",
-                style: TextStyle(
-                  color: Colors.green,
-                  fontSize: 16.0,
-                ),
-                //maxLines: 1,
-              ),
-              // splashColor: Colors.indigo[700],
-              // highlightColor: Colors.indigo[700],
-              // minWidth: 200.0,
-              // height: 45.0,
-              // shape: (RoundedRectangleBorder(
-              //     borderRadius: BorderRadius.circular(20.0))),
             ),
           ),
         ],
@@ -119,6 +94,7 @@ class _tutorialState extends State<tutorial> {
           "Tutorial",
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Beriberu',
           ),
         ),
         centerTitle: true,

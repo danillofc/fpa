@@ -11,19 +11,19 @@ class maqdescricao extends StatelessWidget {
   setasset() {
     if (maq == "Pespontadeira") {
       descricao =
-          "A maquina pespontadeira serve para fazer pesponto em peças costuradas na interlok, e também para aplicação de bolsos. Seus pontos são iguais da maquina reta com a função de retrocesso. Uma diferença entre pespontadeiras são os alternadores, eles permitem que certos pontos sejam costurados com uma agulha apenas, para facilitar a aplicação dos bolsos.";
+          "A máquina Pespontadeira serve para fazer pesponto em peças costuradas na Interlock, e também para aplicação de bolsos. Seus pontos são iguais aos da máquina Reta com a função de retrocesso. Uma diferença entre pespontadeiras são os alternadores, que permitem que certos pontos sejam costurados com uma agulha apenas, para facilitar a aplicação dos bolsos.";
       image = "assets/imagens/pesp.jpg";
     } else if (maq == "Overlock") {
       descricao =
-          "   A maquina overlok serve para o fechamento das peças, substituindo o chuleado a mão. Ela pode ser utilizada na maioria dos tecidos, porém a preferência seja utilizados em malhas e tecidos leves. Tecidos pesados devem ser confeccionados na maquina interlok. Uma variação da maquina overlok é a ponto cadeia, ela possui uma segunda agulha dando reforço na costura.";
+          "   A máquina Overlock serve para o fechamento das peças, substituindo o chuleado a mão. Ela pode ser utilizada na maioria dos tecidos, porém a preferência é que sejam utilizadas em malhas e tecidos leves. Tecidos pesados devem ser confeccionados na máquina Interlock. Uma variação da máquina Overlock é a ponto cadeia, que possui uma segunda agulha dando reforço na costura.";
       image = "assets/imagens/over.jpg";
     } else if (maq == "Interlock") {
       descricao =
-          "   A interlok possui uma função parecida com a overlok, porém ela vem com duas linhas a mais, nos quais ela faz uma costura parecida com a da maquina reta. Esta costura facilita a dobra do tecido na hora de fazer o pesponto.";
+          "   A máquina Interlock possui função parecida com a Overlock, porém vem com duas linhas a mais, fazendo uma costura parecida com a da máquina Reta. Esta costura facilita a dobra do tecido no momento de fazer o pesponto.";
       image = "assets/imagens/interlock.jpg";
     } else if (maq == "Máquina Reta") {
       descricao =
-          "   A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.A maquina reta é a mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. A maquina reta possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, no qual corta o fio e da retrocesso na maquina apenas utilizando o pedal.";
+          "   A máquina Reta é a máquina mais comum entre as costureiras, pois a maioria das peças deve ser costurada nela. Essa máquina possui um único tipo de ponto, podendo utilizar a função de retrocesso. Hoje em dia também encontramos o modelo eletrônico, em que se realiza o corte do fio e o retrocesso na máquina apenas utilizando o pedal.";
       image = "assets/imagens/reta.jpg";
     }
   }
@@ -80,6 +80,7 @@ class _pageState extends State<page> {
                     ),
                   ),
                   ),
+                  SizedBox(height: 14.0),
                   Text(
                     data, //Texto sobre a máquina
                     style: TextStyle(
@@ -100,6 +101,7 @@ class _pageState extends State<page> {
           maquina,
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Beriberu',
           ),
         ),
         centerTitle: true,
@@ -111,28 +113,14 @@ class _pageState extends State<page> {
           },
           child: Icon(Icons.arrow_back),
         ),
-      ),
-
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                size: 24.0,
-              ),
-              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+        actions: [
+          IconButton(icon: Icon(Icons.home), 
+            onPressed: () =>
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => home(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
-        shape: CircularNotchedRectangle(),
+            )),
+          ),
+        ],
       ),
     );
   }

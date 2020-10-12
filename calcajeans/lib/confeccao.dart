@@ -11,9 +11,9 @@ class confeccao extends StatefulWidget {
 
 class _confeccaoState extends State<confeccao> {
   List<String> imagem = [
-    "assets/imagens/moldes.png",
-    "assets/imagens/av_f.jpg",
-    "assets/imagens/av_t.jpg",
+    "assets/imagens/moldes.jpg",
+    "assets/imagens/frente.jpg",
+    "assets/imagens/tras.jpg",
   ];
 
   Widget customcard(String opcao, String image) {
@@ -56,9 +56,11 @@ class _confeccaoState extends State<confeccao> {
                     opcao,
                     style: TextStyle(
                       fontSize: 30.0,
+                      fontFamily: 'Pink',
                     ),
                   ),
                 ),
+                SizedBox(height: 6.0),
               ],
             ),
           ),
@@ -85,6 +87,7 @@ class _confeccaoState extends State<confeccao> {
           "Confecção",
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Pink',
           ),
         ),
         centerTitle: true,
@@ -96,28 +99,14 @@ class _confeccaoState extends State<confeccao> {
           },
           child: Icon(Icons.arrow_back),
         ),
-      ),
-
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.home,
-                size: 24.0,
-              ),
-              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+        actions: [
+          IconButton(icon: Icon(Icons.home), 
+            onPressed: () =>
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
                 builder: (context) => home(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
-        ),
-        color: Theme.of(context).primaryColor,
-        shape: CircularNotchedRectangle(),
+            )),
+          ),
+        ],
       ),
     );
   }

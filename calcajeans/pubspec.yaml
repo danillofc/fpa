@@ -32,4 +32,14 @@ flutter:
      - assets/icones/
      - assets/imagens/
      - assets/perguntas.json
-    
+
+  fonts:
+    - family: Beriberu
+      fonts:
+        - asset: fonts/BeriberuSweetie-Normal.otf
+    - family: Pink
+      fonts:
+        - asset: fonts/PinkChicken-Regular.ttf
+    - family: Sanlulus
+      fonts:
+        - asset: fonts/Sanlulus-Italic.ttf

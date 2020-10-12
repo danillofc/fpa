@@ -120,7 +120,7 @@ class _quizpage2State extends State<quizpage2> {
     setState(() {
       btncolor[k] = colortoshow;
     });
-    Timer(Duration(seconds: 1), next); //mudei de 2 pra 1
+    Timer(Duration(milliseconds: 800), next); //mudei 
   }
 
   Widget botao(String k) {
@@ -136,6 +136,7 @@ class _quizpage2State extends State<quizpage2> {
           style: TextStyle(
             color: Colors.white,
             fontSize: 15.0,
+            fontFamily: 'Sanlulus',
           ),
         ),
         color: btncolor[k],
@@ -216,14 +217,24 @@ class _quizpage2State extends State<quizpage2> {
         ],
       ),
       appBar: AppBar(
-        //toolbarHeight: 30.0,
+        toolbarHeight: 35.0,
         title: Text(
           "Quiz",
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Beriberu',
           ),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(icon: Icon(Icons.home), 
+            onPressed: () =>
+                  Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (context) => home(),
+            )),
+            alignment: Alignment.centerRight,
+          ),
+        ],
       ),
     );
   }

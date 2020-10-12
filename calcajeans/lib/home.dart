@@ -56,9 +56,11 @@ class _homeState extends State<home> {
                     opcao,
                     style: TextStyle(
                       fontSize: 30.0,
+                      fontFamily: 'Pink',
                     ),
                   ),
                 ),
+                SizedBox(height: 6.0),
               ],
             ),
           ),
@@ -72,9 +74,10 @@ class _homeState extends State<home> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Menu",
+          "Menu Inicial",
           style: TextStyle(
             fontSize: 20.0,
+            fontFamily: 'Beriberu',
           ),
         ),
         centerTitle: true,
