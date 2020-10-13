@@ -1,8 +1,6 @@
 import 'package:calcajeans/home.dart';
-
 import 'confeccao.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'maquinas.dart';
 
 class tutorial extends StatefulWidget {
@@ -93,8 +91,8 @@ class _tutorialState extends State<tutorial> {
         title: Text(
           "Tutorial",
           style: TextStyle(
-            fontSize: 20.0,
-            fontFamily: 'Beriberu',
+            fontSize: 30.0,
+            fontFamily: 'Pink',
           ),
         ),
         centerTitle: true,

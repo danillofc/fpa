@@ -1,9 +1,6 @@
 import 'package:calcajeans/tutorial.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'home.dart';
-import 'quizpage.dart';
-import 'flash.dart';
 import 'maqdescricao.dart';
 
 class maquinas extends StatefulWidget {
@@ -92,7 +89,7 @@ class _maquinasState extends State<maquinas> {
         title: Text(
           "Máquinas",
           style: TextStyle(
-            fontSize: 20.0,
+            fontSize: 30.0,
             fontFamily: 'Pink',
           ),
         ),

@@ -1,8 +1,5 @@
-import 'package:calcajeans/home.dart';
-import 'package:calcajeans/quizpage.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
-
 
 class resultpage extends StatefulWidget {
   int acertos;
@@ -18,25 +15,13 @@ class _resultpageState extends State<resultpage> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          "Resultado",
-          style: TextStyle(
-            fontSize: 20.0,
-            fontFamily: 'Beriberu',
-          ),
-        ),
-        centerTitle: true,
-      ),
-
-      //body: Center(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center, //adicionei
+        mainAxisAlignment: MainAxisAlignment.center, 
         children: <Widget>[
           Container(alignment: Alignment.center,
           padding: EdgeInsets.symmetric(vertical: 5.0),
-            width: 300.0, //adicionei
-            color: Colors.lightGreen,
+            width: 300.0, 
+            color: Colors.orange[200],
             child: Text(
               "Você acertou $acertos pergunta(s)",
               style: TextStyle(
@@ -47,12 +32,10 @@ class _resultpageState extends State<resultpage> {
           ),
           SizedBox(height: 7.0),
           Container(
-            //height: 40.0, //
             padding: EdgeInsets.symmetric(vertical: 5.0),
-            width: 300.0, //adicionei
-            //color: Colors.lightGreen,
+            width: 300.0, 
             child: Text(
-              "Registre seu resultado clicando no link abaixo. Servirá para obtermos feedback.",
+              "Registre seu resultado clicando no link abaixo. Servirá como feedback.",
               style: TextStyle(
                 fontSize: 12.0,
               ),
@@ -62,13 +45,12 @@ class _resultpageState extends State<resultpage> {
           SizedBox(height: 30.0),
           Container(alignment: Alignment.center,
             padding: EdgeInsets.symmetric(
-              //vertical: 2.0,
               horizontal: 20.0,
             ),
             child: MaterialButton(
               onPressed: () =>
                 Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => telalogin(),
+                builder: (context) => Telalogin(),
               )),
                 child: Text(
                   "Registrar",
@@ -86,27 +68,15 @@ class _resultpageState extends State<resultpage> {
         ]
       ),
 
-      bottomNavigationBar: BottomAppBar(
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(width: 7),
-            IconButton(
-              icon: Icon(
-                Icons.redo,
-                size: 24.0,
-              ),
-              onPressed: () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => quizpage(),
-              )),
-            ),
-            SizedBox(width: 7),
-          ],
+      appBar: AppBar(
+        title: Text(
+          "Resultado",
+          style: TextStyle(
+            fontSize: 30.0,
+            fontFamily: 'Pink',
+          ),
         ),
-        //color: Theme.of(context).primaryColor,
-        color: Colors.orange,
-        shape: CircularNotchedRectangle(),
+        centerTitle: true,
       ),
     );
   }

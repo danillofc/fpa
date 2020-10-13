@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'confeccao.dart';
 import 'home.dart';
-import 'tutorial.dart';
 
 class confeccaodescricao extends StatelessWidget {
   String conf;
@@ -13,7 +12,7 @@ class confeccaodescricao extends StatelessWidget {
   setasset() {
     if (conf == "Moldes") {
       descricao =
-          "   Os moldes são peças que representam as partes do modelo da calça, retirados da modelagem, que foi desenvolvida sobre as bases.   A calça jeans é feita de tecido Denim, em que são feitos cortes conforme o formato dos moldes. A maioria dos moldes é do tipo simétrico, em relação aos lados (direito e esquerdo).   As imagens acima mostram os tipos comuns de moldes utilizados para a confecção de uma calça jeans básica.";
+          "   Os moldes são peças que representam as partes do modelo da calça, retirados da modelagem, que foi desenvolvida sobre as bases.      A calça jeans é feita de tecido Denim, em que são feitos cortes conforme o formato dos moldes. A maioria dos moldes é do tipo simétrico, em relação aos lados (direito e esquerdo). As imagens acima mostram os tipos comuns de moldes utilizados para a confecção de uma calça jeans básica.";
       image = "assets/imagens/moldesdh.jpg";
       image2 = "assets/imagens/moldeseh.jpg";
     } else if (conf == "Aviamentos frontais") {
@@ -34,7 +33,10 @@ class confeccaodescricao extends StatelessWidget {
     String item = conf;
     String imagem = image;
     String imagem2 = image2;
-    return page(data: data, item: item, imagem: imagem, imagem2: imagem2);
+    return page(data: data, 
+                item: item, 
+                imagem: imagem, 
+                imagem2: imagem2);
   }
 }
 
@@ -67,43 +69,34 @@ class _pageState extends State<page> {
       body: Column(
         children: <Widget>[
           Expanded(
-            //flex: 3,
             child: Container(
               padding: EdgeInsets.all(15.0),
-              color: Colors.red,
-              //alignment: Alignment.bottomLeft,
               child: ListView(
-              //child: PageView(  
                 children: <Widget>[
                   Container(
-                    //adicionei
-                    padding: EdgeInsets.symmetric(vertical: 5.0),
-                    height: 200.0, //adicionei
-                    //width: 200.0, //adicionei
-                    color: Colors.green,
-                    //child: ListView(
+                    height: 250.0, 
                     child: PageView( 
                       scrollDirection: Axis.horizontal,
                       children: <Widget>[
                         Container(
                           padding: EdgeInsets.symmetric(vertical: 5.0),
-                          height: 200.0, //adicionei
-                          width: 200.0, //adicionei
+                          height: 250.0, 
+                          width: 200.0, 
                           color: Colors.grey,
                           child: Image(
                             image: AssetImage(
-                              imagem, //Imagem da parte
+                              imagem, //Imagem da parte da calça
                             ),
                           ),
                         ),
                         Container(
-                          height: 200.0, //
+                          height: 250.0, 
                           padding: EdgeInsets.symmetric(vertical: 5.0),
-                          width: 200.0, //adicionei
-                          color: Colors.yellow,
+                          width: 200.0, 
+                          color: Colors.grey,
                           child: Image(
                             image: AssetImage(
-                              imagem2, //Imagem2 da parte
+                              imagem2, //Imagem2 da parte da calça
                             ),
                           ),
                         ),
@@ -130,7 +123,7 @@ class _pageState extends State<page> {
           item,
           style: TextStyle(
             fontSize: 20.0,
-            fontFamily: 'Beriberu',
+            fontFamily: 'Pink',
           ),
         ),
         centerTitle: true,

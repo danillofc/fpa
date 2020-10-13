@@ -11,7 +11,7 @@ class maqdescricao extends StatelessWidget {
   setasset() {
     if (maq == "Pespontadeira") {
       descricao =
-          "A máquina Pespontadeira serve para fazer pesponto em peças costuradas na Interlock, e também para aplicação de bolsos. Seus pontos são iguais aos da máquina Reta com a função de retrocesso. Uma diferença entre pespontadeiras são os alternadores, que permitem que certos pontos sejam costurados com uma agulha apenas, para facilitar a aplicação dos bolsos.";
+          "   A máquina Pespontadeira serve para fazer pesponto em peças costuradas na Interlock, e também para aplicação de bolsos. Seus pontos são iguais aos da máquina Reta com a função de retrocesso. Uma diferença entre pespontadeiras são os alternadores, que permitem que certos pontos sejam costurados com uma agulha apenas, para facilitar a aplicação dos bolsos.";
       image = "assets/imagens/pesp.jpg";
     } else if (maq == "Overlock") {
       descricao =
@@ -69,16 +69,15 @@ class _pageState extends State<page> {
               child: ListView(
                 children: <Widget>[
                   Container(
-                  //adicionei
-                  padding: EdgeInsets.symmetric(vertical: 5.0),
-                  height: 200.0, //adicionei
-                  width: 200.0, //adicionei
-                  color: Colors.grey,
-                  child:Image(
-                    image: AssetImage(
-                      imagem,   //Imagem da máquina
+                    padding: EdgeInsets.symmetric(vertical: 5.0),
+                    height: 200.0, //adicionei
+                    width: 200.0, //adicionei
+                    color: Colors.grey,
+                    child:Image(
+                      image: AssetImage(
+                        imagem,   //Imagem da máquina
+                      ),
                     ),
-                  ),
                   ),
                   SizedBox(height: 14.0),
                   Text(
@@ -101,7 +100,7 @@ class _pageState extends State<page> {
           maquina,
           style: TextStyle(
             fontSize: 20.0,
-            fontFamily: 'Beriberu',
+            fontFamily: 'Pink',
           ),
         ),
         centerTitle: true,

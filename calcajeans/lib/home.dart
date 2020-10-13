@@ -76,8 +76,8 @@ class _homeState extends State<home> {
         title: Text(
           "Menu Inicial",
           style: TextStyle(
-            fontSize: 20.0,
-            fontFamily: 'Beriberu',
+            fontSize: 30.0,
+            fontFamily: 'Pink',
           ),
         ),
         centerTitle: true,

@@ -60,7 +60,6 @@ class _quizpage2State extends State<quizpage2> {
   int acertos = 0;
   int i = 1;
   int j = 1;
-  //int questao_index = 1; //adicionei em 01/10
   var random_array;
 
   Map<String, Color> btncolor = {
@@ -74,7 +73,6 @@ class _quizpage2State extends State<quizpage2> {
     var distinctIds = [];
     var rand = new Random();
     for (int t = 0;;) {
-      //distinctIds.add(1+rand.nextInt(10));
       distinctIds.add(1+rand.nextInt(10));
       random_array = distinctIds.toSet().toList();
       if (random_array.length < 10) {
@@ -107,7 +105,6 @@ class _quizpage2State extends State<quizpage2> {
       btncolor["c"] = Colors.blueGrey;
       btncolor["d"] = Colors.blueGrey;
     });
-    //next();
   }
 
   void checkanswer(String k) {
@@ -120,7 +117,7 @@ class _quizpage2State extends State<quizpage2> {
     setState(() {
       btncolor[k] = colortoshow;
     });
-    Timer(Duration(milliseconds: 800), next); //mudei 
+    Timer(Duration(milliseconds: 500), next); 
   }
 
   Widget botao(String k) {
@@ -155,18 +152,16 @@ class _quizpage2State extends State<quizpage2> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+
           //PERGUNTA(IMAGEM)
           Container(
-            //flex: 6,
             child: Padding(
               //adicionei
-              padding: EdgeInsets.symmetric(vertical: 5.0), //adicionei
+              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0), //adicionei
               child: Material(
-                //adicionei
                 child: Container(
-                  //adicionei
-                  height: 200.0, //adicionei
-                  width: 200.0, //adicionei
+                  height: 200.0, 
+                  width: 200.0, 
                   color: Colors.grey,
                   child: Image(
                     image: AssetImage(
@@ -181,9 +176,9 @@ class _quizpage2State extends State<quizpage2> {
           //PERGUNTA(TEXTO)
           Container(
             //Expanded(
-            //height: 60.0, //adicionei
+            height: 60.0, //adicionei
             //width: 200.0, //adicionei
-            color: Colors.green,
+            color: Colors.blueGrey[100],
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
               //alignment: Alignment.bottomLeft,
@@ -199,11 +194,7 @@ class _quizpage2State extends State<quizpage2> {
           ),
 
           //ALTERNATIVAS
-          //Expanded(
           Container(
-            //height: 60.0, //adicionei
-            //flex: 3,
-            //child: Container(
               child: Column(
                 children: <Widget>[
                   botao("a"),
@@ -213,15 +204,16 @@ class _quizpage2State extends State<quizpage2> {
                 ],
               ),
             ),
-          //),
+            SizedBox(height: 10.0),
         ],
       ),
+
       appBar: AppBar(
-        toolbarHeight: 35.0,
+        toolbarHeight: 40.0,
         title: Text(
           "Quiz",
           style: TextStyle(
-            fontSize: 20.0,
+            fontSize: 30.0,
             fontFamily: 'Beriberu',
           ),
         ),

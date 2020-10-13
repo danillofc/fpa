@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'login.dart';
+import 'home.dart';
 import 'dart:async';
 
 
@@ -13,9 +13,9 @@ class _telaflashState extends State<telaflash> {
   @override
   void initState() {
     super.initState();
-    Timer(Duration(seconds: 2), () {
+    Timer(Duration(milliseconds: 2500), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (context) => telalogin(), //será Login, quando tiver pronta
+        builder: (context) => home(), 
       ));
     });
   }
@@ -26,9 +26,10 @@ class _telaflashState extends State<telaflash> {
       backgroundColor: Colors.blueGrey,
       body: Center(
         child: Text(
-          "Confecção Jeans",
+          "Calça Jeans",
           style: TextStyle(
             fontSize: 40.0,
+            fontFamily: "Pink"
           ),
           textAlign: TextAlign.center,
         ),

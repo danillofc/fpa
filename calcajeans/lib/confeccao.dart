@@ -1,4 +1,3 @@
-import 'package:calcajeans/demoexemplo.dart';
 import 'package:calcajeans/home.dart';
 import 'package:calcajeans/tutorial.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +23,6 @@ class _confeccaoState extends State<confeccao> {
       child: InkWell(
         onTap: () {
           Navigator.of(context).pushReplacement(MaterialPageRoute(
-            // in changelog 1 we will pass the langname name to ther other widget class
-            // this name will be used to open a particular JSON file 
-            // for a particular language
             builder: (context) => confeccaodescricao(opcao),
           ));
         },
@@ -86,7 +82,7 @@ class _confeccaoState extends State<confeccao> {
         title: Text(
           "Confecção",
           style: TextStyle(
-            fontSize: 20.0,
+            fontSize: 30.0,
             fontFamily: 'Pink',
           ),
         ),
