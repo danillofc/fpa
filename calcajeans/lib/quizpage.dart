@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 import 'dart:math';
 import 'dart:convert';
 import 'resultpage.dart';
-import 'home.dart';
 
 class quizpage extends StatefulWidget {
   @override
@@ -61,6 +60,7 @@ class _quizpage2State extends State<quizpage2> {
   int i = 1;
   int j = 1;
   var random_array;
+  var qnt = 0;
 
   Map<String, Color> btncolor = {
     "a": Colors.blueGrey,
@@ -73,11 +73,12 @@ class _quizpage2State extends State<quizpage2> {
     var distinctIds = [];
     var rand = new Random();
     for (int t = 0;;) {
-      distinctIds.add(1+rand.nextInt(10));
+      distinctIds.add(1 + rand.nextInt(10));
       random_array = distinctIds.toSet().toList();
       if (random_array.length < 10) {
         continue;
       } else {
+        qnt = random_array.length;
         break;
       }
     }
@@ -117,7 +118,7 @@ class _quizpage2State extends State<quizpage2> {
     setState(() {
       btncolor[k] = colortoshow;
     });
-    Timer(Duration(milliseconds: 500), next); 
+    Timer(Duration(milliseconds: 500), next);
   }
 
   Widget botao(String k) {
@@ -132,7 +133,7 @@ class _quizpage2State extends State<quizpage2> {
           mydata[2][i.toString()][k],
           style: TextStyle(
             color: Colors.white,
-            fontSize: 15.0,
+            fontSize: 20.0,
             fontFamily: 'Sanlulus',
           ),
         ),
@@ -152,16 +153,15 @@ class _quizpage2State extends State<quizpage2> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
-
           //PERGUNTA(IMAGEM)
           Container(
             child: Padding(
-              //adicionei
-              padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 5.0), //adicionei
+              padding: EdgeInsets.symmetric(
+                  vertical: 5.0, horizontal: 5.0), //adicionei
               child: Material(
                 child: Container(
-                  height: 200.0, 
-                  width: 200.0, 
+                  height: 200.0,
+                  width: 200.0,
                   color: Colors.grey,
                   child: Image(
                     image: AssetImage(
@@ -175,13 +175,10 @@ class _quizpage2State extends State<quizpage2> {
 
           //PERGUNTA(TEXTO)
           Container(
-            //Expanded(
-            height: 60.0, //adicionei
-            //width: 200.0, //adicionei
+            height: 60.0,
             color: Colors.blueGrey[100],
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 10.0),
-              //alignment: Alignment.bottomLeft,
               child: Text(
                 mydata[1][i.toString()],
                 maxLines: 3,
@@ -195,19 +192,18 @@ class _quizpage2State extends State<quizpage2> {
 
           //ALTERNATIVAS
           Container(
-              child: Column(
-                children: <Widget>[
-                  botao("a"),
-                  botao("b"),
-                  botao("c"),
-                  botao("d"),
-                ],
-              ),
+            child: Column(
+              children: <Widget>[
+                botao("a"),
+                botao("b"),
+                botao("c"),
+                botao("d"),
+              ],
             ),
-            SizedBox(height: 10.0),
+          ),
+          SizedBox(height: 10.0),
         ],
       ),
-
       appBar: AppBar(
         toolbarHeight: 40.0,
         title: Text(
@@ -218,15 +214,23 @@ class _quizpage2State extends State<quizpage2> {
           ),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(icon: Icon(Icons.home), 
-            onPressed: () =>
-                  Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => home(),
-            )),
-            alignment: Alignment.centerRight,
-          ),
-        ],
+      ),
+
+      bottomNavigationBar: Container(
+            height: 25.0,
+            color: Colors.blueGrey[100],
+            child: Padding(
+              padding: EdgeInsets.symmetric(vertical: 2.0, horizontal: 10.0),
+              //padding: EdgeInsets.symmetric(horizontal: 10.0),
+              child: Text(
+                "Pergunta: $j/$qnt",
+                textAlign: TextAlign.justify,
+                style: TextStyle(
+                  fontSize: 15.0,
+                  fontFamily: 'Pink',
+                ),
+              ),
+            ),
       ),
     );
   }

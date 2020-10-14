@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 import 'login.dart';
 
 class resultpage extends StatefulWidget {
@@ -77,6 +78,16 @@ class _resultpageState extends State<resultpage> {
           ),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () =>
+                Navigator.of(context).pushReplacement(MaterialPageRoute(
+              builder: (context) => home(),
+            )),
+            alignment: Alignment.centerRight,
+          ),
+        ],
       ),
     );
   }

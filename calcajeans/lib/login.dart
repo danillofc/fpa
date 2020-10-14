@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'home.dart';
+import 'flash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class Telalogin extends StatefulWidget {
@@ -35,7 +35,7 @@ class _TelaloginState extends State<Telalogin> {
             isLoading = false;
           });
           Navigator.of(context).pushReplacement(MaterialPageRoute(
-            builder: (context) => home(),
+            builder: (context) => telaflash(),
           ));
         });
       }
