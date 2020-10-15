@@ -1,16 +1,9 @@
-# calcajeans
+# Calça Jeans
 
-A new Flutter project.
+O app Calça Jeans é um aplicativo simples educativo com informações básicas a respeito de confecção de calça jeans, apresentando um breve Tutorial e um Quiz contendo 10 perguntas.
 
-## Getting Started
+# Gráfico de navegação
+![gráfico de navegação](https://user-images.githubusercontent.com/70111888/96081145-11ff7a80-0e8f-11eb-9e20-5c1c992645e5.jpg)
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# Considerações
+O app se trata de um projeto proposto pela Disciplina Fundamentos de Programação Aplicada, sendo utilizado o Flutter.
